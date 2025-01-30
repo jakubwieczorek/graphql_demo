@@ -1,0 +1,21 @@
+scalar BigDecimal
+
+type Transaction {
+    settledAmount: BigDecimal
+    originatorAccountNumber: String
+    beneficiaryAccountNumber: String
+    beneficiaryAddress: Address
+    originatorAddress: Address
+    firstName: String
+    surname: String
+}
+
+type Address {
+    street: String
+    country: String
+    city: String
+}
+
+type Query {
+    getTransactions: [Transaction]
+}

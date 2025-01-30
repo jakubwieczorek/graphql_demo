@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: graphql_demo
+  graphql:
+    graphiql:
+      enabled: true
+    path: /graphql
