@@ -1,8 +1,11 @@
 package hawk.graphql_demo.web;
 
-import hawk.graphql_demo.model.Transaction;
+import hawk.graphql_demo.model.config.Config;
+import hawk.graphql_demo.model.transaction.Transaction;
+import hawk.graphql_demo.repository.ConfigCache;
 import hawk.graphql_demo.repository.TransactionDB;
 import lombok.RequiredArgsConstructor;
+import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
@@ -33,9 +36,15 @@ import java.util.List;
 @RequiredArgsConstructor
 public class GraphQLController {
     private final TransactionDB transactionDB;
+    private final ConfigCache configCache;
 
     @QueryMapping
     public List<Transaction> getTransactions() {
-        return transactionDB.getTransactionMap().values().stream().toList();
+        return transactionDB.getTransactions().values().stream().toList();
+    }
+
+    @QueryMapping
+    public Config getConfig(@Argument Integer configVersion) {
+        return configCache.getConfigs().get(configVersion);
     }
 }

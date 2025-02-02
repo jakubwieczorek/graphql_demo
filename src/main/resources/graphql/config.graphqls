@@ -1,0 +1,30 @@
+type Config {
+    version: Int
+    volumeRisk: [VolumeRiskConfig]
+    passthrough: [PassthroughConfig]
+    unusualFrequency: [UnusualFrequencyConfig]
+}
+
+type VolumeRiskConfig {
+    volumeThreshold: BigDecimal
+    unit: String
+    timeThreshold: Int
+}
+
+type PassthroughConfig {
+    minNumber: Int
+    minAmount: BigDecimal
+    numberOfSmurfs: Int
+    timeRange: Int
+    unit: String
+}
+
+type UnusualFrequencyConfig {
+    numberOfPayments: Int
+    timeRange: Int
+    unit: String
+}
+
+extend type Query {
+    getConfig(configVersion: Int): Config
+}

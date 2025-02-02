@@ -1,9 +1,10 @@
 package hawk.graphql_demo.repository;
 
 import com.github.javafaker.Faker;
-import hawk.graphql_demo.model.Address;
-import hawk.graphql_demo.model.Transaction;
+import hawk.graphql_demo.model.transaction.Address;
+import hawk.graphql_demo.model.transaction.Transaction;
 import jakarta.annotation.PostConstruct;
+import lombok.Getter;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
@@ -15,12 +16,9 @@ import java.util.stream.LongStream;
 
 @Repository
 public class TransactionDB {
+    @Getter
     private final Map<Long, Transaction> transactions = new ConcurrentHashMap<>();
     private final Faker faker = new Faker();
-
-    public Map<Long, Transaction> getTransactionMap() {
-        return transactions;
-    }
 
     @PostConstruct
     void initDB() {

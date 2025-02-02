@@ -4,7 +4,7 @@ package hawk.graphql_demo.web;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import hawk.graphql_demo.model.Transaction;
+import hawk.graphql_demo.model.transaction.Transaction;
 import hawk.graphql_demo.repository.TransactionDB;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,14 +26,14 @@ class RestHttpController {
 
     @GetMapping("/transactions")
     ResponseEntity<List<Transaction>> getTransactions() {
-        return ResponseEntity.ok(transactionDB.getTransactionMap().values().stream().toList());
+        return ResponseEntity.ok(transactionDB.getTransactions().values().stream().toList());
     }
 
     @GetMapping("/fields")
     ResponseEntity<List<ObjectNode>> getFields(@RequestBody List<String> fields) {
         var missingFields = new LinkedHashSet<>();
 
-        var transactionFields = transactionDB.getTransactionMap().values().stream()
+        var transactionFields = transactionDB.getTransactions().values().stream()
             .map(objectMapper::valueToTree)
             .map(JsonNode.class::cast)
             .map(it -> {
