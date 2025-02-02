@@ -109,7 +109,7 @@
                             <schemaPaths>
                                 <param>src/main/resources/graphql-client</param>
                             </schemaPaths>
-                            <packageName>hawk.graphql_demo.codegen</packageName>
+                            <packageName>demo.graphql_demo.codegen</packageName>
                             <addGeneratedAnnotation>true</addGeneratedAnnotation>
                         </configuration>
                     </execution>

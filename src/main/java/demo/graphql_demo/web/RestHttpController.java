@@ -1,11 +1,11 @@
-package hawk.graphql_demo.web;
+package demo.graphql_demo.web;
 
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import hawk.graphql_demo.model.transaction.Transaction;
-import hawk.graphql_demo.repository.TransactionDB;
+import demo.graphql_demo.model.transaction.Transaction;
+import demo.graphql_demo.repository.TransactionDB;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

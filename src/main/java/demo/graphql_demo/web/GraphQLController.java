@@ -1,9 +1,9 @@
-package hawk.graphql_demo.web;
+package demo.graphql_demo.web;
 
-import hawk.graphql_demo.model.config.Config;
-import hawk.graphql_demo.model.transaction.Transaction;
-import hawk.graphql_demo.repository.ConfigCache;
-import hawk.graphql_demo.repository.TransactionDB;
+import demo.graphql_demo.model.config.Config;
+import demo.graphql_demo.model.transaction.Transaction;
+import demo.graphql_demo.repository.ConfigCache;
+import demo.graphql_demo.repository.TransactionDB;
 import lombok.RequiredArgsConstructor;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;

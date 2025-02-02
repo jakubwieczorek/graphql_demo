@@ -1,8 +1,8 @@
-package hawk.graphql_demo.repository;
+package demo.graphql_demo.repository;
 
 import com.github.javafaker.Faker;
-import hawk.graphql_demo.model.transaction.Address;
-import hawk.graphql_demo.model.transaction.Transaction;
+import demo.graphql_demo.model.transaction.Address;
+import demo.graphql_demo.model.transaction.Transaction;
 import jakarta.annotation.PostConstruct;
 import lombok.Getter;
 import org.springframework.stereotype.Repository;

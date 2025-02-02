@@ -1,9 +1,9 @@
-package hawk.graphql_demo.repository;
+package demo.graphql_demo.repository;
 
-import hawk.graphql_demo.model.config.Config;
-import hawk.graphql_demo.model.config.PassthroughConfig;
-import hawk.graphql_demo.model.config.UnusualFrequencyConfig;
-import hawk.graphql_demo.model.config.VolumeRiskConfig;
+import demo.graphql_demo.model.config.Config;
+import demo.graphql_demo.model.config.PassthroughConfig;
+import demo.graphql_demo.model.config.UnusualFrequencyConfig;
+import demo.graphql_demo.model.config.VolumeRiskConfig;
 import jakarta.annotation.PostConstruct;
 import lombok.Getter;
 import org.springframework.stereotype.Repository;

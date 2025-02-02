@@ -1,4 +1,4 @@
-package hawk.graphql_demo.config;
+package demo.graphql_demo.config;
 
 import graphql.scalars.ExtendedScalars;
 import org.springframework.context.annotation.Bean;

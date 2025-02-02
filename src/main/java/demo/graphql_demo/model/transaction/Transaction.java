@@ -1,4 +1,4 @@
-package hawk.graphql_demo.model.transaction;
+package demo.graphql_demo.model.transaction;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

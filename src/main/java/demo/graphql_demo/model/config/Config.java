@@ -1,4 +1,4 @@
-package hawk.graphql_demo.model.config;
+package demo.graphql_demo.model.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
