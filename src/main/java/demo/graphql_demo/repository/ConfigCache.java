@@ -62,6 +62,8 @@ public class ConfigCache {
                 .unit(units.get(ThreadLocalRandom.current().nextInt(0, units.size() - 1)))
                 .minAmount(BigDecimal.valueOf(ThreadLocalRandom.current().nextDouble(0, 1000)))
                 .minNumber(ThreadLocalRandom.current().nextLong(3, 20))
+                .timeRange(ThreadLocalRandom.current().nextLong(1, 100))
+                .numberOfSmurfs(ThreadLocalRandom.current().nextLong(1, 10))
                 .build())
             .toList();
     }

@@ -44,6 +44,8 @@ public class GraphQLController {
     }
 
     @QueryMapping
+    // No additional endpoints
+    // Schema maintenance. Bad and good. Bad because of maintenance, good because FE can use it
     public Config getConfig(@Argument Integer configVersion) {
         return configCache.getConfigs().get(configVersion);
     }
